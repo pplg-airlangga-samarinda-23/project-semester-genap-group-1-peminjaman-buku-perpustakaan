@@ -1,6 +1,6 @@
 <?php
 
-class profileModel {
+class DashBoardModel {
     private $koneksi;
 
     public function __construct(mysqli $koneksi) {
@@ -8,8 +8,13 @@ class profileModel {
     }
 
     // ambil semua barang
-    public function getAll() {
-        $sql = "SELECT * FROM profile_member";
+    public function getAllAnggota() {
+        $sql = "SELECT * FROM data_anggota";
+        $rows = $this->koneksi->execute_query($sql, []);
+        return $rows;
+    }
+    public function getAllBuku() {
+        $sql = "SELECT * FROM data_buku";
         $rows = $this->koneksi->execute_query($sql, []);
         return $rows;
     }

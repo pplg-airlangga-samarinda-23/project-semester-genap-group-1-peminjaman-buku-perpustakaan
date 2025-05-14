@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($row){
         session_start();
         $_SESSION["Username"] = $row["Username"]; 
-        header("Location:profile.php");
+        header("Location:DashBoard.php");
     }
     
 }

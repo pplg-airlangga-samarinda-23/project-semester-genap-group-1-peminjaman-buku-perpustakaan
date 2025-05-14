@@ -5,7 +5,7 @@
 $hostname = "localhost";
 $username = "root";
 $password = "";
-$database = "randomizer";
+$database = "perpustakaan";
 
 $koneksi = new mysqli($hostname, $username, $password, $database);
 
