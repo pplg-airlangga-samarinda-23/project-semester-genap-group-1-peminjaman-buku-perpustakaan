@@ -6,6 +6,7 @@ function ShowPage(pageNumber) {
     document.getElementById("AnggotaPapan").classList.remove("active");
     document.getElementById("PinjamPapan").classList.remove("active");
     document.getElementById("LaporanPapan").classList.remove("active");
+    document.getElementById("tambahBuku").classList.remove("active");
     
     // Show the selected page
     if (pageNumber === 1) {
@@ -18,7 +19,10 @@ function ShowPage(pageNumber) {
         document.getElementById("PinjamPapan").classList.add("active");
     } else if (pageNumber === 5) {
         document.getElementById("LaporanPapan").classList.add("active");
-    }
+    } else if (pageNumber === 6) {
+        document.getElementById("tambahBuku").classList.add("active");
+    } 
+
 }
 
 // Function to handle card clicks (alternative to href)

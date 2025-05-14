@@ -19,11 +19,11 @@ class DashBoardModel {
         return $rows;
     }
     // edit file
-    public function tambah($id, $nama, $umur, $tanggal, $roles, $tag, $status) {
-        $update_sql = "UPDATE profile_member SET Nama = '$nama', Umur_akun = $umur, Tanggal_masuk_server = '$tanggal', Roles = '$roles', Tag_member = '$tag', status = '$status' WHERE id_member = $id";
+    public function EditBuku($id, $id_buku, $judul_buku, $penerbit, $tahun ) {
+        $update_sql = "UPDATE data_buku SET id_buku = '$id_buku', judul_buku = '$judul_buku', penerbit = '$penerbit', tahun = '$tahun' WHERE id_member = $id";
     
         if ($this->koneksi->query($update_sql)) {
-            header("Location: Profile.php");
+            header("Location: DashBoard.php");
             exit;
         } else {
             echo "Error: " . $this->koneksi->error;

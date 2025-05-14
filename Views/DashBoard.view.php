@@ -158,6 +158,7 @@
             margin-bottom: 20px;
             align-self: flex-start;
             transition: background 0.3s;
+
         }
         
         .back-button:hover {
@@ -292,6 +293,118 @@
             color: #666;
             text-align: right;
         }
+        /* tambah buku */
+        .add-book-container {
+            max-width: 100%;
+            margin: 0 auto;
+            background-color:rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        /* Header Styles */
+        .page-header {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .page-title {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* Section Styles */
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Form Group Styles */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        .form-readonly {
+            background-color: #f9f9f9;
+            color: #777;
+        }
+
+        /* Divider Styles */
+        .section-divider {
+            height: 1px;
+            background-color: #eee;
+            margin: 30px 0;
+            border: none;
+        }
+
+        /* Button Styles */
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button-primary {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background-color: #2980b9;
+        }
+
+        .button-secondary {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .button-secondary:hover {
+            background-color: #c0392b;
+        }
+
+        /* style data anggota */
+
     </style>
 </head>
 <body>
@@ -363,7 +476,7 @@
     <div id="BukuPapan" class="book-table-container content ">
             <div class="table-header">
             <button class="back-button" onclick="ShowPage(1)">← Kembali ke Dashboard</button>
-                <a href="#" class="add-button">+ Tambah Data</a>
+                <a href="#" class="add-button" onclick="ahaw('tambahBuku', 'BukuPapan')" >+ Tambah Data</a>
                 <span class="breadcrumb">Daftar Buku</span>
             </div>
             
@@ -397,6 +510,9 @@
                 </thead>
                 <tbody>
 
+                    <tr>
+
+                    </tr>
                 </tbody>
             </table>
             
@@ -425,8 +541,43 @@
         <p>Konten laporan akan muncul di sini</p>
     </div>
 
+        <!-- tambah buku & anggota -->
 
+    <div id="tambahBuku" class="content ">
+            <div class="add-book-container">
+        <header class="page-header">
+            <h1 class="page-title">Tambah Buku</h1>
+        </header>
 
+        <section class="form-section">
+            <h2 class="section-title">ID Buku</h2>
+            
+            <div class="form-group">
+                <input type="text" class="form-input form-readonly" value="BO06" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="judul-buku" class="form-label">Judul Buku</label>
+                <input type="text" id="judul-buku" class="form-input" placeholder="Masukkan judul buku">
+            </div>
+            <div class="form-group">
+                <label for="nama-penerbit" class="form-label">Nama Penerbit</label>
+                <input type="text" id="nama-penerbit" class="form-input" placeholder="Masukkan nama penerbit">
+            </div>
+            
+            <div class="form-group">
+                <label for="tahun-terbit" class="form-label">Tahun Terbit</label>
+                <input type="text" id="tahun-terbit" class="form-input" placeholder="Masukkan tahun terbit">
+            </div>
+        
+        </section>
+
+        <div class="button-group">
+            <button class="button button-secondary" onclick="showpage(2)">Batal</button>
+            <button type="submit" class="button button-primary">Simpan</button>
+        </div>
+    </div>
+    
 
     </main>
 </body>
