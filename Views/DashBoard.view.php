@@ -435,24 +435,7 @@
             <div><strong>E-Perpus</strong></div>
             <div>Sistem Informasi Perpustakaan Berbasis Web</div>
         </div>
-        <!-- <div id="DashPapan" class="content active">
-            <a href="#" class="card blue" id="Buku">
-                <div class="text">Daftar Buku</div>
-                <span class="more">More Info →</span>
-            </a>
-            <a href="Profile.php" class="card orange" >
-                <div class="text">Daftar Anggota</div>
-                <span class="more">More Info →</span>
-            </a>
-            <a href="#" class="card green">
-                <div class="text">Peminjaman</div>
-                <span class="more">More Info →</span>
-            </a>
-            <a href="#" class="card red">
-                <div class="text">Laporan</div>
-                <span class="more">More Info →</span>
-            </a>
-        </div> -->
+
         <div id="DashPapan" class="MainContent active">
             
         <a href="#" class="card blue" onclick="ahaw('BukuPapan', 'DashPapan')">
@@ -553,28 +536,28 @@
             <h2 class="section-title">ID Buku</h2>
             
             <div class="form-group">
-                <input type="text" class="form-input form-readonly" value="BO06" readonly>
+                <input name="id_buku" type="text" class="form-input form-readonly" placeholder="masukan id buku">
             </div>
             
             <div class="form-group">
                 <label for="judul-buku" class="form-label">Judul Buku</label>
-                <input type="text" id="judul-buku" class="form-input" placeholder="Masukkan judul buku">
+                <input type="text" name="judul_buku" id="judul-buku" class="form-input" placeholder="Masukkan judul buku">
             </div>
             <div class="form-group">
                 <label for="nama-penerbit" class="form-label">Nama Penerbit</label>
-                <input type="text" id="nama-penerbit" class="form-input" placeholder="Masukkan nama penerbit">
+                <input type="text" name="penerbit" id="nama-penerbit" class="form-input" placeholder="Masukkan nama penerbit">
             </div>
             
             <div class="form-group">
                 <label for="tahun-terbit" class="form-label">Tahun Terbit</label>
-                <input type="text" id="tahun-terbit" class="form-input" placeholder="Masukkan tahun terbit">
+                <input type="text" name="tahun" id="tahun-terbit" class="form-input" placeholder="Masukkan tahun terbit">
             </div>
         
         </section>
 
         <div class="button-group">
-            <button class="button button-secondary" onclick="showpage(2)">Batal</button>
-            <button type="submit" class="button button-primary">Simpan</button>
+            <button class="button button-secondary" onclick="ahaw('BukuPapan', 'tambahBuku')">Batal</button>
+            <button type="submit" class="button button-primary" onclick="ahaw('BukuPapan', 'tambahBuku')">Simpan</button>
         </div>
     </div>
     

@@ -12,6 +12,8 @@ require "koneksi.php";
 
 require "DashBoardModel.php";
 $DashboardModel = new  DashBoardModel($koneksi);
+$rows1 = $DashboardModel->getAllBuku();
+$rows2= $DashboardModel->getAllAnggota();
 
 
 // kode php lama
